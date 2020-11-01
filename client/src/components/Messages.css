@@ -1,0 +1,43 @@
+/* Color Palet */
+/*
+Dark Red: #6F1D1B
+Dark Green: #53917E
+Dark Blue: #264653
+White: #F2F4F3
+Black: #22333B
+Light Orange: #f4a261
+*/
+
+.messageBoard {
+    margin: 50px;
+}
+
+.messageSections {
+    display: flex;
+    align-items: center;
+}
+
+.converstions {
+    width: 30%;
+    height: 300px;
+    border-right: 2px solid black;
+}
+
+.chatWindow {
+    width: 70%;
+    height: 300px;
+    padding: 20px;
+}
+
+.chatBox {
+    width: 85%;
+}
+
+.sendButton {
+    width: 15%;
+}
+
+.messageBubbles {
+    display: flex;
+    align-items: center;
+}

@@ -1,0 +1,135 @@
+/* Color Palet */
+/*
+Dark Red: #6F1D1B
+Dark Green: #53917E
+Dark Blue: #264653
+White: #F2F4F3
+Black: #22333B
+Light Orange: #f4a261
+ */
+
+/* Color Palet */
+/*
+Dark Red: #6F1D1B
+Dark Green: #53917E
+Dark Blue: #264653
+White: #F2F4F3
+Black: #22333B
+Light Orange: #f4a261
+
+ */
+
+ .wrapper {
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #53917E;
+  }
+  
+  .form-wrapper {
+    width: 550px;
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 50px black;
+    background-color: #F2F4F3;
+  }
+  
+  form {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    font-family: 'Playfair Display', serif;
+  }
+  
+  h1, p {
+    text-align: center;
+    width: 100%;
+    color: black;
+    font-family: 'Playfair Display', serif;
+  }
+  
+  label {
+    font-size: 1em;
+    margin-bottom: 0.25em;
+    color: black;
+    font-family: 'Playfair Display', serif;
+  }
+  
+  input {
+    padding: 10px 10px;
+    border-radius: 5px;
+    outline: none;
+    border: 1px solid black;
+  }
+  
+  input::placeholder {
+    font-size: 1.2em;
+    color: gray;
+    font-family: 'Playfair Display', serif;
+  }
+  
+  input.error {
+    border: 1px solid red;
+    color: red;
+  }
+  
+  .errorMessage {
+    color: red;
+    font-size: 0.75em;
+    display: relative;
+  }
+  
+  .maxParticipants, .skill {
+    margin-right: 1%;
+  }
+  .events, .time {
+    margin-left: 1%;
+  }
+  
+  .maxParticipants, .events, .skill, .location, .time, .details {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+  }
+  
+  .maxParticipants, .events, .skill, .time {
+    width: 49%;
+  }
+
+  .location, .details {
+    width: 100%;
+  }
+
+  .createHang {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .createHang button {
+    background-color: #264653;
+    color: #F2F4F3;
+    border: 1px solid black;
+    width: 100%;  
+    margin-top: 1em;
+    padding: 8px 0px;
+    font-size: 1em;;
+    letter-spacing: 1px;
+    border-radius: 5px;
+  }
+  
+  .createHang button:hover {
+    color: white;
+    background-color: #366375;
+    border: 2px solid #366375;
+  }
+  
+  .createHang small {
+    color: black;
+  }

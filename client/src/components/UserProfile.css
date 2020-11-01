@@ -1,0 +1,45 @@
+/* Color Palet */
+/*
+Dark Red: #6F1D1B
+Dark Green: #53917E
+Dark Blue: #264653
+White: #F2F4F3
+Black: #22333B
+Light Orange: #f4a261
+ */
+
+
+.borderLine {
+    border-top: 1px solid gray;
+}
+
+
+
+.userDetail {
+    text-align: left;
+    width: 160px;
+    height: 160px;
+    border-radius: 80px;
+    border: solid black;
+}
+
+.profileMargins {
+    display: flex;
+    justify-content: space-around;
+    max-width: 550px;
+    margin: 30px auto;
+}
+
+
+.hangsNumber {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.currentHangs, .pastHangs, .currentActivities, .pastActivities {
+    justify-content: center;
+    text-align: center;
+    max-width: 550px;
+    margin: 18px auto;
+} 
