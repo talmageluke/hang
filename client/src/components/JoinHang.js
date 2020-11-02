@@ -3,21 +3,14 @@ import { Dropdown, DropdownButton, Button, Row, Col } from "react-bootstrap";
 import api from "../utils/API"
 import axios from "axios"
 
-
 const JoinHang = (props) => {
-
-
   const [data, setData] = useState()
 
   useEffect(() => {
     axios.get("api/hang").then((response) => {
-
       setData(response)
     })
-
   }, [])
-
-
 
   console.log(data)
 

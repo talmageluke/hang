@@ -9,10 +9,8 @@ export default class Home extends Component {
     return (
       <div className="wrapper">
         <div className="logo">
-        <img src={logo} alt="logo"/>
+          <img src={logo} alt="logo" />
         </div>
-        <h1 className="homeTitle">Welcome to Hang</h1>
-        <p className="homeTitle"> Find Friends With Similar Hobbies!</p>
         <Row>
           <Col>
             <Link to="/createHang">

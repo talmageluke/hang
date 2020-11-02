@@ -8,12 +8,9 @@ Black: #22333B
 Light Orange: #f4a261
  */
 
-
 .borderLine {
     border-top: 1px solid gray;
 }
-
-
 
 .userDetail {
     text-align: left;
@@ -29,7 +26,6 @@ Light Orange: #f4a261
     max-width: 550px;
     margin: 30px auto;
 }
-
 
 .hangsNumber {
     display: flex;

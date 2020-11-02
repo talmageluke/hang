@@ -34,13 +34,13 @@ export default class UserProfile extends Component {
         <h4 className="currentHangs">Current Hangs</h4>
         <div className="currentActivities">
           <Card>
-            <Card.Body>Current Hang</Card.Body>
+            <Card.Body>Current Hangs</Card.Body>
           </Card>
         </div>
         <h4 className="pastHangs">Past Hangs</h4>
         <div className="pastActivities">
           <Card>
-            <Card.Body>Past Hang</Card.Body>
+            <Card.Body>Past Hangs</Card.Body>
           </Card>
         </div>
       </div>
