@@ -6,6 +6,16 @@ const app = express();
 const passport = require("./passport/setup")
 const users = require("./routes/api/users");
 const hangs = require("./routes/api/hangs")
+const path = require('path');
+app.use(express.static(path.join(__dirname, 'build')));
+
+app.get('/ping', function (req, res) {
+    return res.send('pong');
+});
+
+app.get('/', function (req, res) {
+    res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
 
 const flash = require("connect-flash")
 
@@ -21,8 +31,13 @@ app.use(
 
 mongoose
     .connect(
-        (process.env.MONGODB_URI || "mongodb+srv://talmageluke:hangpassword@cluster0.jyodq.mongodb.net/hang_db?retryWrites=true&w=majority"),
-        { useNewUrlParser: true }
+        (process.env.MONGODB_URI || "mongodb+srv://root:password1!@fitnesstracker.9clmu.mongodb.net/hang_db?retryWrites=true&w=majority"),
+        {
+            useNewUrlParser: true,
+            useUnifiedTopology: true,
+            useCreateIndex: true,
+            useFindAndModify: false
+        }
     )
     .then(() => console.log("MongoDB connected"))
     .catch(err => console.log(err));
