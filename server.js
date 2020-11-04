@@ -1,7 +1,7 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
-const port = process.env.PORT || 5000;
+const PORT = process.env.PORT || 5000;
 const app = express();
 const passport = require("./passport/setup")
 const users = require("./routes/api/users");
@@ -51,4 +51,4 @@ app.use(flash())
 app.use("/api/users", users);
 app.use("/api/hang", hangs);
 
-app.listen(port, () => console.log(`Server running on port ${port} !`));
+app.listen(PORT, () => console.log(`Server running on PORT ${PORT} !`));
