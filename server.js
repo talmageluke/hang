@@ -30,7 +30,7 @@ app.use(
 
 mongoose
     .connect(
-        (process.env.MONGODB_URI || "mongodb+srv://root:password1!@fitnesstracker.9clmu.mongodb.net/hang_db?retryWrites=true&w=majority"),
+        (process.env.MONGODB_URI || "mongodb+srv://root:password1!@cluster0.suypg.mongodb.net/hang_db?retryWrites=true&w=majority"),
         {
             useNewUrlParser: true,
             useUnifiedTopology: true,
