@@ -1,43 +1,32 @@
-import React, { Component, useState, useEffect } from 'react';
-import { Dropdown, DropdownButton, Button, Row, Col } from "react-bootstrap";
-import api from "../utils/API"
-import axios from "axios"
+// import React, { Component, useState, useEffect } from "react";
+// import { Button, Card } from "react-bootstrap";
+// import api from "../utils/API";
+// import axios from "axios";
 
-const JoinHang = (props) => {
-  const [data, setData] = useState()
+// const JoinHang = (props) => {
+//   const [data, setData] = useState();
 
-  useEffect(() => {
-    axios.get("api/hang").then((response) => {
-      setData(response)
-    })
-  }, [])
+//   useEffect(() => {
+//     axios.get("api/hang").then((response) => {
+//       setData(response);
+//     });
+//   }, []);
+//   console.log(data);
 
-  console.log(data)
+//   const renderCard = (card, index) => {
+//     return (
+//       <Card className="text-center" key={index}>
+//         <Card.Header>{data.User}</Card.Header>
+//         <Card.Body>
+//           <Card.Title>{data.Header}</Card.Title>
+//           <Card.Text>{data.Body}</Card.Text>
+//           <Button variant="primary">Join Hang</Button>
+//         </Card.Body>
+//         <Card.Footer className="text-muted">{data.Date}</Card.Footer>
+//       </Card>
+//     );
+//   };
+//   return <div>{data.map(renderCard)}</div>;
+// };
 
-  return (
-    <div className="wrapper" >
-      <div className="form-wrapper">
-        <h1 className="joinTitle">Join Hang</h1>
-        <Row className="hangRow">
-          <Col xs={2} md={4} className="dropdown">
-
-            <DropdownButton
-              id="dropdown-basic-button"
-              title=" Hang { }">
-
-
-            </DropdownButton>
-          </Col>
-          <Col xs={2} md={4} ></Col>
-          <Col xs={2} md={4} className="join">
-            <Button variant="info">Join Hang</Button>{' '}
-          </Col>
-        </Row>
-
-      </div>
-    </div>
-
-  );
-};
-
-export default JoinHang
+// export default JoinHang;
