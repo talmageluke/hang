@@ -7,15 +7,16 @@ const passport = require("./passport/setup")
 const users = require("./routes/api/users");
 const hangs = require("./routes/api/hangs")
 const path = require('path');
-app.use(express.static(path.join(__dirname, 'build')));
-
-app.get('/ping', function (req, res) {
-    return res.send('pong');
-});
-
-app.get('/', function (req, res) {
-    res.sendFile(path.join(__dirname, 'build', 'index.html'));
-});
+const PORT = process.env.PORT || 3001;
+// Define middleware here
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+// Serve up static assets (usually on heroku)
+if (process.env.NODE_ENV === "production") {
+    app.use(express.static("client/build"));
+}
+// Add routes, both API and view
+app.use(routes);
 
 const flash = require("connect-flash")
 
