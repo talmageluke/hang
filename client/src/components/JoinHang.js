@@ -1,43 +1,42 @@
-import React, { Component, useState, useEffect } from 'react';
-import { Dropdown, DropdownButton, Button, Row, Col } from "react-bootstrap";
-import api from "../utils/API"
-import axios from "axios"
+import React from 'react';
+import { Button, Card } from "react-bootstrap";
 
-const JoinHang = (props) => {
-  const [data, setData] = useState()
+import axios from 'axios';
 
-  useEffect(() => {
-    axios.get("api/hang").then((response) => {
-      setData(response)
-    })
-  }, [])
+export default class PersonList extends React.Component {
+  state = {
+    hangs: []
+  }
 
-  console.log(data)
+  componentDidMount() {
+    axios.get(`api/hang`)
+      .then(res => {
+        const hangs = res.data;
+        this.setState({ hangs });
+        console.log(hangs)
+      })
+  }
 
-  return (
-    <div className="wrapper" >
-      <div className="form-wrapper">
-        <h1 className="joinTitle">Join Hang</h1>
-        <Row className="hangRow">
-          <Col xs={2} md={4} className="dropdown">
+  render() {
+    return (
+      <ul>
+        { this.state.hangs.map(hang =>
+          <Card className="text-center" key={hang.id}>
+            <Card.Header>{hang.User}</Card.Header>
+            <Card.Body>
+              <Card.Title>{hang.event}</Card.Title>
+              <Card.Text>Skill level: {hang.skill}
+              </Card.Text>
+              <Card.Text>Location: {hang.location} ‎‎‎‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎ Time: {hang.time}</Card.Text>
+              <Card.Text>Details: {hang.details}</Card.Text>
+              <Button variant="primary">Join Hang</Button>
 
-            <DropdownButton
-              id="dropdown-basic-button"
-              title=" Hang { }">
+            </Card.Body>
+            <Card.Footer className="text-muted">{hang.date}</Card.Footer>
+          </Card>
 
-
-            </DropdownButton>
-          </Col>
-          <Col xs={2} md={4} ></Col>
-          <Col xs={2} md={4} className="join">
-            <Button variant="info">Join Hang</Button>{' '}
-          </Col>
-        </Row>
-
-      </div>
-    </div>
-
-  );
-};
-
-export default JoinHang
+        )}
+      </ul>
+    )
+  }
+}
