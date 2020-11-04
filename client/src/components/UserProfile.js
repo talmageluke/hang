@@ -1,11 +1,13 @@
 import React from "react";
 import { Container, Row, Col, Card } from "react-bootstrap";
 import { useAuth0 } from "@auth0/auth0-react";
+import "./UserProfile.css"
 
 export const Profile = () => {
   const { user } = useAuth0();
   return (
-    <Container className="mb-5">
+    <div className="wrapper">
+      <Container className="mb-5 userProf">
       <Row className="align-items-center profile-header mb-5 text-center text-md-left">
         <Col md={2}>
           <img
@@ -15,8 +17,8 @@ export const Profile = () => {
           />
         </Col>
         <Col md>
-          <h2>{user.name}</h2>
-          <p className="lead text-muted">{user.email}</p>
+          <h2 className="userName">{user.nickname}</h2>
+          <p className="userName lead text-muted">{user.email}</p>
         </Col>
       </Row>
       <div className="borderLine"></div>
@@ -33,6 +35,7 @@ export const Profile = () => {
         </Card>
       </div>
     </Container>
+    </div>
   );
 };
 

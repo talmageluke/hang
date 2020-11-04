@@ -3,13 +3,27 @@
 Dark Red: #6F1D1B
 Dark Green: #53917E
 Dark Blue: #264653
-White: #F2F4F3
+White: 
 Black: #22333B
 Light Orange: #f4a261
  */
-
+.userProf {
+    background-color: #F2F4F3;
+    border-radius: 25px;
+}
 .borderLine {
     border-top: 1px solid gray;
+}
+
+.profile-header {
+    margin: auto;
+    width: auto;
+    padding: 1%;
+    border-radius: 25px;
+    border: solid;
+    border-color: #f4a261;
+    background-color: #F2F4F3;
+    justify-content: center;
 }
 
 .userDetail {
@@ -33,9 +47,24 @@ Light Orange: #f4a261
     width: 100%;
 }
 
+
+.userName {
+    color: #264653; 
+}
+
 .currentHangs, .pastHangs, .currentActivities, .pastActivities {
     justify-content: center;
     text-align: center;
-    max-width: 550px;
     margin: 18px auto;
 } 
+
+.currentHangs, .pastHangs {
+    color: #264653;
+}
+
+.currentActivities, .pastActivities {
+    border: solid;
+    border-color: #f4a261;
+    border-radius: 10px;
+}
+

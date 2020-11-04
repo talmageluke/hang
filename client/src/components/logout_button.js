@@ -5,7 +5,7 @@ import { Button } from "react-bootstrap";
 const LogoutButton = () => {
   const { logout } = useAuth0();
   return (
-    <Button
+    <Button 
       onClick={() => logout()}
       id='qsLogoutBtn'
       variant='dark'
