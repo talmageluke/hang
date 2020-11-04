@@ -6,8 +6,6 @@ const app = express();
 const passport = require("./passport/setup")
 const users = require("./routes/api/users");
 const hangs = require("./routes/api/hangs")
-const path = require('path');
-const PORT = process.env.PORT || 3001;
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
