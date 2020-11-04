@@ -66,13 +66,12 @@ export default class CreateHang extends Component {
           location: this.state.location,
           time: this.state.time,
           details: this.state.details,
-          date: this.state.date
-
-
+          eventDate: this.state.date
         }
 
       ).then(res => {
         console.log(res)
+        window.location.href = "/joinHang";
 
       })
     } else {
@@ -191,6 +190,20 @@ export default class CreateHang extends Component {
                 <span className="errorMessage">{formErrors.time}</span>
               )}
             </div>
+            <div className="date">
+              <label htmlFor="date">Date</label>
+              <input
+                className={formErrors.time.length > 0 ? "error" : null}
+                placeholder="Enter Date"
+                type="date"
+                name="date"
+                noValidate
+                onChange={this.handleChange}
+              />
+              {formErrors.time.length > 0 && (
+                <span className="errorMessage">{formErrors.date}</span>
+              )}
+            </div>
             {/* Location */}
             <div className="location">
               <label htmlFor="location">Location</label>
@@ -222,12 +235,10 @@ export default class CreateHang extends Component {
               )}
             </div>
             <div className="createHang">
-              <Link to='/joinHang' >
 
-                <button type="submit">
-                  Create Hang
+              <button type="submit">
+                Create Hang
               </button>
-              </Link>
             </div>
           </form>
         </div>

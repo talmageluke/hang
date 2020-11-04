@@ -9,6 +9,7 @@ const hangSchema = new Schema({
     time: { type: String, required: true },
     location: { type: String, required: true },
     details: { type: String, required: true },
+    eventDate: { type: String, required: true },
     date: { type: Date, default: Date.now }
 
 });

@@ -91,7 +91,7 @@ Light Orange: #f4a261
     margin-left: 1%;
   }
   
-  .maxParticipants, .events, .skill, .location, .time, .details {
+  .maxParticipants, .events, .skill, .location, .date, .time, .details {
     display: flex;
     flex-direction: column;
     margin-bottom: 15px;
@@ -101,8 +101,11 @@ Light Orange: #f4a261
     width: 49%;
   }
 
+  .date, .details {
+    width: 50%;
+  }
   .location, .details {
-    width: 100%;
+    width: 50%;
   }
 
   .createHang {

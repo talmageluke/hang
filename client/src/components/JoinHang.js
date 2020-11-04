@@ -29,10 +29,10 @@ export default class PersonList extends React.Component {
               </Card.Text>
               <Card.Text>Location: {hang.location} ‎‎‎‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎‏‏‎ ‎ Time: {hang.time}</Card.Text>
               <Card.Text>Details: {hang.details}</Card.Text>
+              <Card.Text> {hang.eventDate}</Card.Text>
               <Button variant="primary">Join Hang</Button>
-
             </Card.Body>
-            <Card.Footer className="text-muted">{hang.date}</Card.Footer>
+            <Card.Footer className="text-muted">Created on 5{hang.date}</Card.Footer>
           </Card>
 
         )}
