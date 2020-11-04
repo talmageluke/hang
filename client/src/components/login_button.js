@@ -7,8 +7,8 @@ const LoginButton = () => {
   return (
     <Button
       onClick={() => loginWithRedirect()}
-      id='qsLoginBtn'
-      variant='light'
+      id="qsLoginBtn"
+      variant="light"
       className="btn-margin"
     >
       Log In
@@ -16,4 +16,4 @@ const LoginButton = () => {
   );
 };
 
-export default LoginButton
+export default LoginButton;
