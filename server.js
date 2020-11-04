@@ -18,11 +18,10 @@ app.use(
     })
 );
 
-const db = require("./config/keys").mongoURI;
 
 mongoose
     .connect(
-        db,
+        (process.env.MONGODB_URI || "mongodb+srv://talmageluke:hangpassword@cluster0.jyodq.mongodb.net/hang_db?retryWrites=true&w=majority"),
         { useNewUrlParser: true }
     )
     .then(() => console.log("MongoDB connected"))

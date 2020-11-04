@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import "./CreateHang.css";
 import axios from "axios"
+import { Link } from 'react-router-dom'
+import JoinHang from './JoinHang'
 
 const formValid = ({ formErrors, ...rest }) => {
   let valid = true;
@@ -46,13 +48,32 @@ export default class CreateHang extends Component {
     if (formValid(this.state)) {
       console.log(`
                 --Submitting--
-                Max Participants: ${this.state.maxParticipants}
+                Max Participants:  ${this.state.maxParticipants}
                 Event: ${this.state.events}
                 Skill Level: ${this.state.skill}
                 Location: ${this.state.location}
                 Time: ${this.state.time}
                 Details: ${this.state.details}
-            `);
+                `
+
+
+      );
+      axios.post("api/hang",
+        {
+          participants: this.state.maxParticipants,
+          event: this.state.events,
+          skill: this.state.skill,
+          location: this.state.location,
+          time: this.state.time,
+          details: this.state.details,
+          eventDate: this.state.date
+        }
+
+      ).then(res => {
+        console.log(res)
+        window.location.href = "/joinHang";
+
+      })
     } else {
       console.error("FORM INVAILID - DISPLAY ERROR");
     }
@@ -83,7 +104,7 @@ export default class CreateHang extends Component {
         break;
       case "time":
         formErrors.time =
-          value.length < 6 ? "Must input at least 6 characters." : "";
+          value.length < 5 ? "Must input a full time." : "";
         break;
       case "details":
         formErrors.details =
@@ -169,6 +190,20 @@ export default class CreateHang extends Component {
                 <span className="errorMessage">{formErrors.time}</span>
               )}
             </div>
+            <div className="date">
+              <label htmlFor="date">Date</label>
+              <input
+                className={formErrors.time.length > 0 ? "error" : null}
+                placeholder="Enter Date"
+                type="date"
+                name="date"
+                noValidate
+                onChange={this.handleChange}
+              />
+              {formErrors.time.length > 0 && (
+                <span className="errorMessage">{formErrors.date}</span>
+              )}
+            </div>
             {/* Location */}
             <div className="location">
               <label htmlFor="location">Location</label>
@@ -200,7 +235,10 @@ export default class CreateHang extends Component {
               )}
             </div>
             <div className="createHang">
-              <button type="submit">Create Hang</button>
+
+              <button type="submit">
+                Create Hang
+              </button>
             </div>
           </form>
         </div>
