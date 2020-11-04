@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./CreateHang.css";
 import axios from "axios"
 import { Link } from 'react-router-dom'
-import JoinHang from './JoinHang'
+// import JoinHang from './JoinHang'
 
 const formValid = ({ formErrors, ...rest }) => {
   let valid = true;
