@@ -32,6 +32,9 @@
     "build": "cd client && npm run build",
     "heroku-postbuild": "npm run build"
   },
+  "engines": {
+    "node": "12.18.2"
+  },
   "eslintConfig": {
     "extends": "react-app"
   },
