@@ -21,13 +21,13 @@ Front End created using React App and Components.
 
 Auth0 for user registration and authentication.
 
-MongoDB database.
+MongoDB and Mongoose for setting up the database for Hangs and Users.
 
 Node and Express for Server.
 
 ### Challenges
 
-GitHub- Merge conflicts. Pulls from master not matching. Re-created Repo
+GitHub- Merge conflicts. Pulls from master not matching. Re-created Repo. Regularly having to delete and re-clone Repo because of pull issues and merge conflicts.
 
 MongoDB- passing data from Create to Join. Connecting users from Auth0 to Join.
 
@@ -43,4 +43,8 @@ Gear Library
 
 Photo Sharing
 
+User Safety features
+
 ### Deployed Link
+
+https://polar-gorge-16815.herokuapp.com/createHang
