@@ -15,7 +15,7 @@ export const Profile = () => {
           />
         </Col>
         <Col md>
-          <h2>{user.name}</h2>
+          <h2>{user.nickname}</h2>
           <p className="lead text-muted">{user.email}</p>
         </Col>
       </Row>
