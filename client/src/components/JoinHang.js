@@ -3,8 +3,6 @@ import { useAuth0 } from "@auth0/auth0-react";
 import { Button, Card } from "react-bootstrap";
 import axios from 'axios';
 
-
-
 function JoinHang(props) {
   const { user } = useAuth0();
 
@@ -22,8 +20,6 @@ function JoinHang(props) {
     alert(`Submitting Name ${user.name}`)
   }
   useEffect(() => { fetchHangs(hangs) }, [hangs]);
-
-
 
   return (
     <ul>
