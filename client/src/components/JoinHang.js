@@ -9,6 +9,7 @@ function JoinHang(props) {
   const { user } = useAuth0();
 
   const [hangs, setHangs] = useState([])
+  const [join, setJoin] = useState({})
 
   const fetchHangs = async () => {
     const response = await axios.get(`api/hang`);
