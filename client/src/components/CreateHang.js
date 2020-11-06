@@ -58,7 +58,7 @@ export default class CreateHang extends Component {
 
 
       );
-      axios.post("api/hang",
+      axios.post("api/hangs",
         {
           participants: this.state.maxParticipants,
           event: this.state.events,

@@ -2,6 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const port = process.env.PORT || 5000;
+const routes = require("./routes");
 const app = express();
 const passport = require("./passport/setup")
 const users = require("./routes/api/users");
@@ -13,6 +14,9 @@ const flash = require("connect-flash")
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
+if (process.env.NODE_ENV === "production") {
+    app.use(express.static("client/build"));
+}
 app.use(
     bodyParser.urlencoded({
         extended: false

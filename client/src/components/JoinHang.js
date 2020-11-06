@@ -10,7 +10,7 @@ function JoinHang(props) {
   const [join, setJoin] = useState({})
 
   const fetchHangs = async () => {
-    const response = await axios.get(`api/hang`);
+    const response = await axios.get(`api/hangs`);
 
     setHangs(response.data);
   };
@@ -23,7 +23,7 @@ function JoinHang(props) {
 
   return (
     <ul>
-      { hangs.map(hang =>
+      {hangs.map(hang =>
         <Card className="text-center" key={hang.id}>
           <Card.Header>{hang.User}</Card.Header>
           <Card.Body>
