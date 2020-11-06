@@ -7,6 +7,7 @@ const passport = require("./passport/setup")
 const users = require("./routes/api/users");
 const hangs = require("./routes/api/hangs")
 
+
 const flash = require("connect-flash")
 
 app.use(express.json());
@@ -17,7 +18,7 @@ app.use(
         extended: false
     })
 );
-
+app.use(routes);
 
 mongoose
     .connect(
