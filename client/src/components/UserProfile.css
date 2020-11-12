@@ -9,7 +9,12 @@ Light Orange: #f4a261
  */
 
 .borderLine {
-    border-top: 1px solid gray;
+    border-top: 1px solid white;
+    width: 100%;
+}
+
+h2 {
+    color: white;
 }
 
 .userDetail {
@@ -39,3 +44,9 @@ Light Orange: #f4a261
     max-width: 550px;
     margin: 18px auto;
 } 
+
+.cardBody {
+    background-color: #53917E;
+    border: 2px solid white;
+    color: white;
+}
