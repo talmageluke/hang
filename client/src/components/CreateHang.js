@@ -91,6 +91,9 @@ export default class CreateHang extends Component {
       case "maxParticipants":
         formErrors.maxParticipants =
           value.length < 1 ? "Must type a number of participants." : "";
+        if (!Number(value)) {
+          alert("Participants must be a number")
+        }
         break;
       case "events":
         formErrors.events = value.length < 2 ? "Must input an event." : "";
