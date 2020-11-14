@@ -166,7 +166,7 @@ export default class CreateHang extends Component {
             {/* Skill */}
             <div className="skill">
               <label htmlFor="skill">Skill</label>
-              <input
+              {/* <input
                 className={formErrors.skill.length > 0 ? "error" : null}
                 placeholder="Skill Level"
                 type="text"
@@ -176,7 +176,7 @@ export default class CreateHang extends Component {
               />
               {formErrors.skill.length > 0 && (
                 <span className="errorMessage">{formErrors.skill}</span>
-              )}
+              )} */}
             </div>
             {/* Time */}
             <div className="time">
