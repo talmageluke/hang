@@ -177,6 +177,14 @@ export default class CreateHang extends Component {
               {formErrors.skill.length > 0 && (
                 <span className="errorMessage">{formErrors.skill}</span>
               )} */}
+              <form>
+                <select value={this.state.skill}>
+                  <option value="">Just for fun</option>
+                  <option value="">Biginners</option>
+                  <option value="">Intermediate</option>
+                  <option value="">Expert</option>
+                </select>
+              </form>
             </div>
             {/* Time */}
             <div className="time">
