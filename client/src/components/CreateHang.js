@@ -179,10 +179,10 @@ export default class CreateHang extends Component {
               )} */}
               <form>
                 <select value={this.state.skill}>
-                  <option value="">Just for fun</option>
-                  <option value="">Biginners</option>
-                  <option value="">Intermediate</option>
-                  <option value="">Expert</option>
+                  <option value="Just for fun">Just for fun</option>
+                  <option value="Biginners">Biginners</option>
+                  <option value="Intermediate">Intermediate</option>
+                  <option value="Expert">Expert</option>
                 </select>
               </form>
             </div>
