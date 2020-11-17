@@ -3,11 +3,15 @@ import { Link } from "react-router-dom";
 import { Row, Col, Card } from "react-bootstrap";
 import "./Home.css";
 import logo from "./logowhite.png";
+import mountainimage from "./mountain.jpg";
 
 export default class Home extends Component {
   render() {
     return (
-      <div className="wrapper">
+      <div className="wrapper"
+        style={{
+          backgroundImage: 'url(' + mountainimage + ')'
+        }}>
         <div className="logo">
           <img src={logo} alt="logo" />
         </div>
