@@ -15,8 +15,7 @@ Light Orange: #f4a261
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
-    /* background-color: #53917E; */
+    background-color: #53917E; 
 }
 
 .createHangBtn {
