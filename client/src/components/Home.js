@@ -10,7 +10,10 @@ export default class Home extends Component {
     return (
       <div className="wrapper"
         style={{
-          backgroundImage: 'url(' + mountainimage + ')'
+          backgroundImage: 'url(' + mountainimage + ')',
+          backgroundSize: "cover",
+          height: "100vh",
+          color: "#53917E"
         }}>
 
         <div className="logo">
