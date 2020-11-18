@@ -12,6 +12,7 @@ export default class Home extends Component {
         style={{
           backgroundImage: 'url(' + mountainimage + ')'
         }}>
+
         <div className="logo">
           <img src={logo} alt="logo" />
         </div>
